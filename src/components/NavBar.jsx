@@ -1,16 +1,20 @@
-import CartWidget from "./CartWidget.jsx";
-function NavBar() {
-    return (
-        <header>
-            <h1>CriptoTech</h1>
-            <nav class="navBar">
-                <a class="navItem" href="#">Inicio</a>
-                <a class="navItem" href="#">Productos</a>
-                <a class="navItem" href="#">Contacto</a>
-                <CartWidget/>
-            </nav>
-        </header>
-    )
+import React from 'react'
+import { Link } from 'react-router-dom'
+import CartWidget from './CartWidget'
+import Desplegable from './Desplegable'
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+        <Link to="/" className="logo"><h1>CyanPhoneStore</h1></Link>
+        <ul className="menu">
+            <li><Link className="menu-link" to="/">Inicio</Link></li>
+            <li><Link className="menu-link" to="/catalogo"><Desplegable/></Link></li>
+            <li><Link className="menu-link" to="/nosotros">Nosotros</Link></li>
+            <li><Link className="menu-link" to="/contacto">Contacto</Link></li>
+            <li><Link className="menu-link" to="/carrito"><CartWidget/></Link></li>
+        </ul>
+    </nav>
+  )
 }
 
-export default NavBar
+export default Navbar

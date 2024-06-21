@@ -1,10 +1,9 @@
 function CartWidget() {
 return (
-<div class="cartDiv">
-    <i class="bi bi-cart4 cartItem"></i>
-    <p class="cartItem"> 3 </p>
-</div>
-)
+    <div className="cartDiv">
+        <i className="bi bi-cart4 cartItem"></i>
+    </div>
+    )
 }
 
 export default CartWidget
